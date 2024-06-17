@@ -1,5 +1,7 @@
 import streamlit as st
-from tkinter import Image
+import requests
+from PIL import Image
+from io import BytesIO
 # Tiêu đề trang
 st.title('Giới thiệu các lăng tẩm ở Huế')
 
