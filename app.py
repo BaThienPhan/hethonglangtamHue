@@ -1,5 +1,5 @@
 import streamlit as st
-
+from tkinter import Image
 # Tiêu đề trang
 st.title('Giới thiệu các lăng tẩm ở Huế')
 
