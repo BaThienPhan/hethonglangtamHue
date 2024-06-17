@@ -14,16 +14,18 @@ tomb_list = [
     "Lăng Đồng Khánh",
     "Lăng Khải Định"
 ]
+def load_image(url):
+    response = requests.get(url)
+    return Image.open(BytesIO(response.content))
 selected_tomb = st.sidebar.radio("", tomb_list)
-
 # Thông tin chi tiết về các lăng
 if selected_tomb == "Lăng Gia Long":
     st.header("Lăng Gia Long")
     # st.image("https://link_to_image_of_lăng_gia_long", caption="Lăng Gia Long")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-gia-long-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-gia-long-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     Tầng Lớp Nghĩa Trang Hoàng Gia
     """)
@@ -32,8 +34,8 @@ if selected_tomb == "Lăng Gia Long":
     Lăng mang phong cách kiến trúc độc đáo, với những đặc trưng riêng của văn hóa Huế.
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-gia-long-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-gia-long-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Kiến Trúc Tinh Xảo
     """)
@@ -43,8 +45,8 @@ if selected_tomb == "Lăng Gia Long":
     hiện sự tinh xảo của nghệ nhân thời bấy giờ. 
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-gia-long-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-gia-long-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Cảnh Quan Tĩnh Lặng
     """)
@@ -59,8 +61,8 @@ elif selected_tomb == "Lăng Minh Mạng":
     # st.image("https://link_to_image_of_lăng_minh_mạng", caption="Lăng Minh Mạng")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-minh-mang-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-minh-mang-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     Nội Cung Lăng Minh Mạng
     """)
@@ -69,8 +71,8 @@ elif selected_tomb == "Lăng Minh Mạng":
     Các trang trí phức tạp và tinh xảo tôn vinh sự uy nghi của vua Minh Mạng
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-minh-mang-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-minh-mang-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Cổng Tam Quan Lăng Minh Mạng
     """)
@@ -79,8 +81,8 @@ elif selected_tomb == "Lăng Minh Mạng":
     Nó đánh dấu sự uy nghi và quyền lực của vị vua đã an nghỉ tại đây.
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-minh-mang-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-minh-mang-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Cảnh Quan Xung Quanh Lăng
     """)
@@ -94,8 +96,8 @@ elif selected_tomb == "Lăng Thiệu Trị":
     # st.image("https://link_to_image_of_lăng_thiệu_trị", caption="Lăng Thiệu Trị")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-trieu-tri-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-trieu-tri-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     Kiến trúc độc đáo
     """)
@@ -104,8 +106,8 @@ elif selected_tomb == "Lăng Thiệu Trị":
     Nơi đây là minh chứng cho sự phát triển của nghệ thuật kiến trúc thời Nguyễn.
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-trieu-tri-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-trieu-tri-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Cổng Tam Quan
     """)
@@ -114,8 +116,8 @@ elif selected_tomb == "Lăng Thiệu Trị":
     Được xây dựng theo kiến trúc cổ, cổng là biểu tượng cho sự uy nghi và tôn nghiêm của lăng mộ.
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-trieu-tri-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-trieu-tri-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Khu mộ
     """)
@@ -134,8 +136,8 @@ elif selected_tomb == "Lăng Tự Đức":
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-tu-duc-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-tu-duc-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     Vẻ Đẹp Kiến Trúc
     """)
@@ -144,8 +146,8 @@ elif selected_tomb == "Lăng Tự Đức":
     phong cách Trung Quốc, tạo nên vẻ đẹp tráng lệ và tinh tế.
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-tu-duc-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-tu-duc-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Cổng Tam Quan Ấn Tượng
     """)
@@ -154,8 +156,8 @@ elif selected_tomb == "Lăng Tự Đức":
     khắc họa tinh tế các hoa văn truyền thống, tạo ấn tượng mạnh mẽ cho du khách.
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-tu-duc-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-tu-duc-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Hồ Tiên Như Huyền Bí
     """)
@@ -169,8 +171,8 @@ elif selected_tomb == "Lăng Dục Đức":
     # st.image("https://link_to_image_of_lăng_dục_đức", caption="Lăng Dục Đức")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-duc-duc-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-duc-duc-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     Vẻ Đẹp Kiến Trúc
     """)
@@ -179,8 +181,8 @@ elif selected_tomb == "Lăng Dục Đức":
     vua Dục Đức trị vì từ năm 1883 đến 1884. Lăng tọa lạc tại núi Thiên An, Huế với kiến trúc độc đáo và tinh xảo.
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-duc-duc-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-duc-duc-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Cổng tam quan
     """)
@@ -189,8 +191,8 @@ elif selected_tomb == "Lăng Dục Đức":
     được xây dựng theo phong cách kiến trúc truyền thống với những hoa văn tinh xảo và sắc màu trang nhã
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-duc-duc-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-duc-duc-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Hồ An Lạc
     """)
@@ -204,8 +206,8 @@ elif selected_tomb == "Lăng Đồng Khánh":
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-dong-khanh-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-dong-khanh-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     """)
     st.write("""
@@ -213,8 +215,8 @@ elif selected_tomb == "Lăng Đồng Khánh":
     Ngự lăng này nằm yên lặng giữa rừng cây xanh mát, toát lên vẻ thiêng liêng và bình yên.
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-dong-khanh-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-dong-khanh-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Kiến Trúc Độc Đáo
     """)
@@ -223,8 +225,8 @@ elif selected_tomb == "Lăng Đồng Khánh":
     Các họa tiết cùng hệ thống cửa vòm và mái ngói cong độc đáo tạo nên vẻ đẹp hài hòa và khí vị riêng.
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-dong-khanh-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-dong-khanh-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Không Gian Linh Thiêng
     """)
@@ -238,8 +240,8 @@ elif selected_tomb == "Lăng Khải Định":
     # st.image("https://link_to_image_of_lăng_khải_định", caption="Lăng Khải Định")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-khai-dinh-1.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-khai-dinh-1.png",
+                 caption="", use_column_width=True))
     st.write("""
     Vẻ đẹp kiến trúc lăng Khải Định
     """)
@@ -248,8 +250,8 @@ elif selected_tomb == "Lăng Khải Định":
     Với sự pha trộn tinh tế giữa phong cách Đông và Tây, lăng Khải Định mang vẻ đẹp độc đáo, đậm chất hoàng gia.
     """)
     with col2:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-khai-dinh-2.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-khai-dinh-2.png",
+                 caption="", use_column_width=True))
     st.write("""
     Nội thất lăng Khải Định
     """)
@@ -258,8 +260,8 @@ elif selected_tomb == "Lăng Khải Định":
     nghệ thuật tuyệt vời, từ mái ngói, cột chống đến ván gỗ, tất cả đều được chạm trổ tinh xảo.
     """)
     with col3:
-        st.image("C:/Users/bathi/OneDrive/Desktop/Python/Lăng tẩm ở Huế/lang-khai-dinh-3.png",
-                 caption="", use_column_width=True)
+        st.image(load_image("https://github.com/BaThienPhan/App_Dien_Kien_Trung/raw/main/lang-khai-dinh-3.png",
+                 caption="", use_column_width=True))
     st.write("""
     Vị trí lăng Khải Định
     """)
