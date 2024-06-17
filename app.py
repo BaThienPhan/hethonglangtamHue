@@ -14,11 +14,11 @@ tomb_list = [
     "Lăng Đồng Khánh",
     "Lăng Khải Định"
 ]
+selected_tomb = st.sidebar.radio("", tomb_list)
+# Thông tin chi tiết về các lăng
 def load_image(url):
     response = requests.get(url)
     return Image.open(BytesIO(response.content))
-selected_tomb = st.sidebar.radio("", tomb_list)
-# Thông tin chi tiết về các lăng
 if selected_tomb == "Lăng Gia Long":
     st.header("Lăng Gia Long")
     # st.image("https://link_to_image_of_lăng_gia_long", caption="Lăng Gia Long")
